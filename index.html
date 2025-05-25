@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aamna-Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 3, 14);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 90px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 256);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 2.8rem;
+        }
+
+        .leftsection .button {
+            padding: 50px 0;
+        }
+
+        .leftsection .btn {
+            padding: 12px 18px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+        .purple {
+            color: rgb(129, 61, 193);
+        }
+
+        #element {
+            color: rgb(129, 61, 193);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            min-height: 80vh;
+            padding-bottom: 220px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            margin-bottom: 60px;
+        }
+
+        .skill-card {
+            background-color: rgba(156, 151, 241, 0.1);
+            border: 1px solid #9c97f1;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ffffff;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(129, 61, 193, 0.3);
+            cursor: pointer;
+        }
+
+
+        .secondSection h2 {
+            font-size: 1.9rem;
+            margin-top: 60px;
+
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+            margin-top: 60px;
+
+        }
+
+        .timeline {
+            position: relative;
+            margin: 50px 0;
+            padding-left: 30px;
+            border-left: 3px solid #9c97f1;
+        }
+
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            /* increase space between items */
+        }
+
+
+
+        .timeline-dot {
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            height: 20px;
+            width: 20px;
+            background-color: #9c97f1;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .timeline-content {
+            padding-left: 20px;
+            color: #dcdcdc;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content p {
+            font-size: 1rem;
+            color: #c0c0f7;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .project-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #9c97f1;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .project-card:hover {
+            background-color: rgba(129, 61, 193, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #b5b1fb;
+            margin-bottom: 15px;
+        }
+
+        .project-btn {
+            display: inline-block;
+            background-color: #9c97f1;
+            color: #000;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-btn:hover {
+            background-color: #b1acf9;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px 60px;
+            justify-content: space-between;
+            background-color: rgb(18, 18, 62);
+        }
+
+        .footer-section {
+            flex: 1 1 200px;
+            margin: 20px;
+            color: white;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            color: #9c97f1;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #dcdcdc;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #9c97f1;
+        }
+
+        .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 15px 0;
+            font-size: 0.9rem;
+            background-color: rgb(18, 18, 62);
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 20px;
+            }
+
+            .footer-section {
+                margin: 20px 0;
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 20px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .firstsection {
+                flex-direction: column;
+                margin: 60px 0;
+                text-align: center;
+            }
+
+            .firstsection>div {
+                width: 90%;
+            }
+
+            .leftsection {
+                font-size: 2rem;
+            }
+
+            .rightsection img {
+                width: 100%;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 15px;
+            }
+
+            .projects {
+                gap: 20px;
+            }
+
+            .footer {
+                flex-direction: column;
+                padding: 30px 20px;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .footer>div {
+                width: auto;
+            }
+
+            .timeline-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .timeline-content p {
+                font-size: 0.95rem;
+            }
+        }
+
+        .services {
+            max-width: 80vw;
+            margin: 60px auto 80px;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2rem;
+            color: #9c97f1;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: rgba(156, 151, 241, 0.1);
+            border: 1px solid #9c97f1;
+            border-radius: 12px;
+            padding: 30px 20px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(129, 61, 193, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: default;
+        }
+
+        .service-card:hover {
+            background-color: rgba(129, 61, 193, 0.4);
+            transform: translateY(-8px);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: #8141c1;
+            /* purple accent */
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .service-card:hover i {
+            color: #c393f7;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #dcdcdc;
+            line-height: 1.5;
+        }
+
+
+
+        .section-heading {
+            font-size: 2.5rem;
+            color: #c7c7e0;
+            /* lighter shade */
+            position: relative;
+            display: inline-block;
+            margin-bottom: 50px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 60%;
+            background: linear-gradient(90deg, #61368b, #928fc9);
+            border-radius: 2px;
+            animation: expand 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes expand {
+            0% {
+                width: 30%;
+            }
+
+            100% {
+                width: 60%;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        .rightsection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-frame {
+            width: 88%;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid #9c97f1;
+            box-shadow: 0 0 30px rgba(156, 151, 241, 0.3);
+        }
+
+        .full-profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+
+            <div class="left">Aamna's Portfolio</div>
+            <div class="right">
+                <ul>
+
+                    <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="/"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="/"><i class="fas fa-code"></i> Projects</a></li>
+                    <li><a href="/"><i class="fas fa-envelope"></i> Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My Name is <span class="purple">Syyeda Aamna</span>
+                <div>and I am a CSE</div>
+                <div>Student Passionate About</div>
+                <div></div>
+                <span id="element"></span>
+                <div class="button">
+                    <a href="resume.pdf" download class="btn">Download Resume</a>
+                    <a href="https://github.com/syyeda-aamna" target="_blank" class="btn">
+                        <i class="fab fa-github" style="margin-right: 8px;"></i>Visit GitHub
+                    </a>
+
+                </div>
+            </div>
+            <div class="rightsection">
+                <div class="profile-frame">
+                    <img src="profile.jpg" alt="Aamna's Profile" class="full-profile-pic">
+                </div>
+            </div>
+
+
+        </section>
+        <hr>
+        <section class="services">
+            <h2 class="section-heading">SERVICES I OFFER</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and functional websites using modern frontend technologies.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Designing intuitive user interfaces with a focus on user experience and accessibility.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Collaboration</h3>
+                    <p>Actively looking for projects to contribute to and grow my skill set in team environments.</p>
+                </div>
+            </div>
+        </section>
+        <section class="secondSection">
+            <h1>SKILLS</h1>
+            <div class="skills-grid">
+                <div class="skill-card">HTML</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">React</div>
+                <div class="skill-card">Node.js</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Java</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">Problem Solving</div>
+            </div>
+            <h2>PROJECTS</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>To-Do List App</h3>
+                    <p>A simple and responsive to-do list web application built using HTML, CSS, and JavaScript. Users
+                        can add, delete, and mark tasks as completed.</p>
+                    <a href="https://syyeda-aamna.github.io/To-do-List/" target="_blank" class="project-btn">View
+                        Project</a>
+                </div>
+            </div>
+
+            <h2>EDUCATION</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>B.Tech in Computer Science and Engineering</h3>
+                        <p>A.P.J. Abdul Kalam Technical University, Lucknow, 2022 - 2026</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>B.Sc in Physics & Mathematics</h3>
+                        <p>Bareilly College, Bareilly, 2022 - 2026</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Intermediate (Science Stream)</h3>
+                        <p>Police Modern School, 2019 - 2020</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>High School</h3>
+                        <p>Police Modern School, 2017 - 2018</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <h4>Aamna's Portfolio</h4>
+                <p>Passionate CSE Student & Developer</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="/"><i class="fas fa-code"></i> Projects</a></li>
+                    <li><a href="/"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li>
+                        <a href="http://www.linkedin.com/in/syyedaaamna" target="_blank">
+                            <i class="fab fa-linkedin" style="margin-right: 8px;"></i>LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:syyedaaamna682@gmail.com">
+                            <i class="fas fa-envelope" style="margin-right: 8px;"></i>syyedaaamna682@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/syyeda-aamna" target="_blank">
+                            <i class="fab fa-github" style="margin-right: 8px;"></i>GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; aamnasportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Software Development', 'Full Stack Development', 'DevOps'],
+            typeSpeed: 50,
+        });
+
+
+    </script>
+</body>
+
+</html>
